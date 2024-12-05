@@ -1,4 +1,5 @@
 from helper_functions import get_input
+import time
 
 ##################################
 ### --- Day 5: Print Queue --- ###
@@ -69,4 +70,7 @@ def get_sums(data: list[str]) -> [int, int]:
 
 if __name__ == '__main__':
     input_lines = get_input()
+    st = time.process_time()
     print(get_sums(input_lines))
+    res = time.process_time() - st
+    print('CPU Execution time:', res, 'seconds')
